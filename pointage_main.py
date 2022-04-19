@@ -42,8 +42,6 @@ def create_filter(TAILLE,e):
 
 def stamp(i,j,M,F,TAILLE):
     matrix = M[i:i+TAILLE,j:j+TAILLE]
-    # print(len(matrix),len(matrix[0]))
-    # print(len(F),len(F[0]))
     matrix = matrix*F
     return np.sum(matrix)
 
@@ -294,16 +292,8 @@ def choice_run():
 
 # main
 
-def init():
-    os.chdir('C:\\Users\\Utilisateur\\Desktop\\Pointage_auto\\BATCH')
-    print(os.listdir())
-    # for i,filename in enumerate(os.listdir()):
-    #     image = imageio.get_reader(filename,  'ffmpeg')
-    #     image = image.get_data(0)
-    #     plt.subplot(1,len(os.listdir()),i+1)
-    #     plt.imshow(image)
-    # plt.show(block=True)
-
+def init(your_path='C:\\Users\\Utilisateur\\Desktop\\Pointage_auto\\BATCH'):
+    os.chdir(your_path)
     menu()
 
 
@@ -325,14 +315,8 @@ TARGETS=[]
 
 ##run
 plt.clf()
-init()
-print('End.')
+init(your_path="'C:\\Users\\Utilisateur\\your\\path\\BATCH")
 
-#TODO excel
-#TODO experience user to crop
-
-
-# comparer le temps/pixel
 
 
 
